@@ -3,14 +3,20 @@ import { injectStripe } from "react-stripe-elements";
 import saveStripeElement from "../actions/saveStripeElement";
 import StripeFormElement from "../components/StripeFormElement";
 
+import { CardElement } from "react-stripe-elements";
+
 const mapDispatchToProps = dispatch => ({
-  handleElementOnChange: (stripe, element) => {
+  handleOnChange: ({ stripe, element }) => {
     dispatch(saveStripeElement({ stripe, element }));
   }
 });
 
+const mergeProps = () => ({
+  CardElement
+});
+
 const StripeFormElementContaniner = connect(
-  null,
+  mergeProps,
   mapDispatchToProps
 )(StripeFormElement);
 

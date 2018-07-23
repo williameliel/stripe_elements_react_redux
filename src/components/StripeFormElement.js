@@ -1,12 +1,7 @@
 import React from "react";
 
-import { CardElement } from "react-stripe-elements";
-
-const StripeFormElement = ({ stripe, handleElementOnChange }) => {
-  const handleOnChange = element => {
-    handleElementOnChange(stripe, element);
-  };
-  return <CardElement onChange={handleOnChange} onReady={el => el.focus()} />;
-};
+const StripeFormElement = ({ stripe, CardElement, handleOnChange }) => (
+  <CardElement onChange={element => handleOnChange({ element, stripe })} />
+);
 
 export default StripeFormElement;
