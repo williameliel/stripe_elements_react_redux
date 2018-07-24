@@ -1,3 +1,3 @@
 # Stripe Elements with React/Redux
 
-A react-redux wrapper to stripe elements. It takes the validated stripe element and save it into the global app redux state.
+A react-redux demo wrapper for stripe elements. It takes the stripe element object and save it into the global app redux state.
