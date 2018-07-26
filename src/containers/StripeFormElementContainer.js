@@ -15,9 +15,9 @@ const mergeProps = () => ({
   CardElement
 });
 
-const StripeFormElementContaniner = connect(
+const StripeFormElementContainer = connect(
   mergeProps,
   mapDispatchToProps
 )(StripeFormElement);
 
-export default injectStripe(StripeFormElementContaniner);
+export default injectStripe(StripeFormElementContainer);
