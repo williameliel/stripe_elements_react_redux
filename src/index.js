@@ -5,6 +5,7 @@ import { createStore, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import stripe from "./reducers";
 import StripeElementsContainer from "./containers/StripeElementsContainer";
+import ExternalButtonContainer from "./containers/ExternalButtonContainer";
 import css from "./index.css";
 
 const middleware = [thunk];
@@ -20,7 +21,10 @@ const store = createStore(
 
 render(
   <Provider store={store}>
-    <StripeElementsContainer />
+    <div>
+      <StripeElementsContainer />
+      <ExternalButtonContainer />
+    </div>
   </Provider>,
   document.getElementById("root")
 );

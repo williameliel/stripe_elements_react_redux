@@ -1,6 +1,8 @@
 import { combineReducers } from "redux";
-
-const stripeElements = (state = {}, { type, payload }) => {
+const initialState = {
+  element: { complete: false }
+};
+const stripeElements = (state = initialState, { type, payload }) => {
   switch (type) {
     case "SAVE_STRIPE_ELEMENT":
       return {
