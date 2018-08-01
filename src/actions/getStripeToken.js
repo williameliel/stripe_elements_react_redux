@@ -3,7 +3,7 @@ const getStripeToken = () => (dispatch, getState) => {
 
   if (stripeElements.stripe && stripeElements.element.complete) {
     stripeElements.stripe.createToken().then(response => {
-      console.log("[Token]", response);
+      console.log('[Token]', response);
     });
   }
 };

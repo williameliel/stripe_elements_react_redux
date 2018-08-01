@@ -7,17 +7,17 @@ import { saveStripe, saveElement } from '../actions/saveStripeElement';
 import StripeFormElement from '../components/StripeFormElement';
 
 const mapDispatchToProps = dispatch => ({
-	handleOnElementChange: element => dispatch(saveElement({ element })),
-	handleOnElementLoad: stripe => dispatch(saveStripe({ stripe }))
+  handleOnElementChange: element => dispatch(saveElement({ element })),
+  handleOnElementLoad: stripe => dispatch(saveStripe({ stripe })),
 });
 
 const mergeProps = () => ({
-	CardElement
+  CardElement,
 });
 
 const StripeFormElementContainer = connect(
-	mergeProps,
-	mapDispatchToProps
+  mergeProps,
+  mapDispatchToProps
 )(StripeFormElement);
 
 export default injectStripe(StripeFormElementContainer);

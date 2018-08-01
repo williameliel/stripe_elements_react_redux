@@ -11,20 +11,20 @@ import css from './index.css';
 const middleware = [thunk];
 
 const store = createStore(
-	stripe,
-	{},
-	compose(
-		applyMiddleware(...middleware),
-		window.devToolsExtension ? window.devToolsExtension() : f => f
-	)
+  stripe,
+  {},
+  compose(
+    applyMiddleware(...middleware),
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+  )
 );
 
 render(
-	<Provider store={store}>
-		<div>
-			<StripeElementsContainer />
-			<ExternalButtonContainer />
-		</div>
-	</Provider>,
-	document.getElementById('root')
+  <Provider store={store}>
+    <div>
+      <StripeElementsContainer />
+      <ExternalButtonContainer />
+    </div>
+  </Provider>,
+  document.getElementById('root')
 );
